@@ -1,0 +1,30 @@
+{
+  "name": "access-token",
+  "version": "0.0.1",
+  "description": "Small OAuth2 access token helper.",
+  "author": "Jonathan Brumley <cayasso@gmail.com>",
+  "homepage": "https://github.com/cayasso/access-token",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cayasso/access-token.git"
+  },
+  "keywords": [
+    "token",
+    "oauth",
+    "access token"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "debug": "~0.7.4",
+    "moment": "~2.5.0",
+    "request": "~2.31.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "expect.js": "*"
+  }
+}
