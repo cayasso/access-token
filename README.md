@@ -123,6 +123,17 @@ accessToken.refresh(token, function (err, newToken) {
 });
 ```
 
+### AccessToken#getToken(token, fn);
+
+If the token has expired, it will fetch a newone, otherwise it will return the current access token. 
+
+```javascript
+accessToken.getToken(token, function (err, token) {
+  if (err) throw Error(err);
+  console.log('This is a valid accesst token', token);
+});
+```
+
 ### Run tests
 
 ``` bash
