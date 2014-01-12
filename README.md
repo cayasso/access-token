@@ -21,8 +21,7 @@ var options = {
   clientSecret: 'my-client-secret',
   tokenPath: '/oauth/token',
   userInfoPath: '/oauth/userinfo',
-  accessTokenName: 'token',
-  before: config.before || 600,
+  accessTokenName: 'token'
 };
 
 var accessToken = new AccessToken(options);
@@ -71,9 +70,11 @@ Create an AccessToken instance
 
 ```javascript
 var accessToken = new AccessToken(config);
+```
 
-// or
+or 
 
+```javascript
 var accessToken = AccessToken(config);
 ```
 
