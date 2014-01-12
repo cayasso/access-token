@@ -1,6 +1,6 @@
 {
   "name": "access-token",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Small OAuth2 access token helper.",
   "author": "Jonathan Brumley <cayasso@gmail.com>",
   "homepage": "https://github.com/cayasso/access-token",
