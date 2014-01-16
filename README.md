@@ -26,29 +26,38 @@ var options = {
 
 var accessToken = new AccessToken(options);
 
+var token = accessToken.token(token);
 
-if (accessToken.isExpired(token)) {
+if (accessToken.expired) {
 
-  accessToken.refresh(token, function (err, newToken) {
+  token.refresh(function (err, newToken) {
     
     if (err) throw new Error(err);
 
     // to validate token
-    accessToken.isValid(newToken, function (err, isValid) {
-      console.log('Is token valid? ', isValid);
+    accessToken.valid(newToken, function (err, valid) {
+      console.log('Is token valid? ', valid);
     });
   });
 }
 
-
 // get a new token if expired or return the same one
 
-accessToken.getToken(token, function (err, token) {
+token.get(function (err, token) {
   
   if (err) throw new Error(err);
 
   console.log('This should be a valid token', token);
 });
+
+// you can also validate the access token against oauth server
+
+token.valid(function(err, valid){
+  if (err) throw new Error(err);
+
+  console.log('Is token valid', valid);
+});
+
 ```
 
 ### API
@@ -87,21 +96,29 @@ Configuration options are:
 * `userInfoPath`: User information path (default is `/oauth/userinfo`).
 * `accessTokenName`: The access token field name (default is `access_token`).
 
-### AccessToken#isExpired(token)
+### AccessToken#token(token)
+
+Wrap a token with magic.
+
+```javascript
+var accessToken = AccessToken(config);
+var token = accessToken.token(token);
+```
+
+### token#expired
 
 Check to see if an access token is expired.
 
 ```javascript
-var expired = accessToken.isExpired(token);
-if (expired) {
+if (token.expired) {
   console.log('Token is expired');
 }
 ```
 
-### AccessToken#isValid(token, fn)
+### token#valid(fn)
 
 ```javascript
-accessToken.isValid(token, function (err, valid) {
+token.valid(function (err, valid) {
   if (err) {
     console.log('There was an error validating');
   }
@@ -112,23 +129,23 @@ accessToken.isValid(token, function (err, valid) {
 
 Check to see if an access token is valid by requesting the oauth provider server.
 
-### AccessToken#refresh(token, fn);
+### token#refresh(fn);
 
 Get a new and fresh access token from the oauth provider.
 
 ```javascript
-accessToken.refresh(token, function (err, newToken) {
+token.refresh(function (err, newToken) {
   if (err) throw Error(err);
   console.log('New access token is', newToken);
 });
 ```
 
-### AccessToken#getToken(token, fn);
+### token#getToken(fn);
 
-If the token has expired, it will fetch a newone, otherwise it will return the current access token. 
+If the token has expired, it will fetch a new .. one, otherwise it will return the current access token. 
 
 ```javascript
-accessToken.getToken(token, function (err, token) {
+token.get(function (err, token) {
   if (err) throw Error(err);
   console.log('This is a valid accesst token', token);
 });
