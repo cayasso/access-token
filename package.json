@@ -1,6 +1,6 @@
 {
   "name": "access-token",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Small OAuth2 access token helper.",
   "author": "Jonathan Brumley <cayasso@gmail.com>",
   "homepage": "https://github.com/cayasso/access-token",
@@ -22,7 +22,8 @@
   "dependencies": {
     "debug": "~0.7.4",
     "moment": "~2.5.0",
-    "request": "~2.31.0"
+    "request": "~2.31.0",
+    "predefine": "0.0.1"
   },
   "devDependencies": {
     "mocha": "*",

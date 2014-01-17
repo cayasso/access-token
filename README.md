@@ -28,7 +28,7 @@ var accessToken = new AccessToken(options);
 
 var token = accessToken.token(token);
 
-if (accessToken.expired) {
+if (token.expired) {
 
   token.refresh(function (err, newToken) {
     
@@ -140,7 +140,7 @@ token.refresh(function (err, newToken) {
 });
 ```
 
-### token#getToken(fn);
+### token#get(fn);
 
 If the token has expired, it will fetch a new .. one, otherwise it will return the current access token. 
 
