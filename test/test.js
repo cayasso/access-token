@@ -27,9 +27,9 @@ describe('access-token', function () {
 	it('should wrap token with required methods', function () {
 		var at = AccessToken(options);
 		var token = at.token(tokens.access);
+		token.get.should.be.a.function;
 		token.valid.should.be.a.function;
 		token.refresh.should.be.a.function;
-		token.get.should.be.a.function;
 		token.expired.should.be.a.function;
 	});
 
@@ -64,7 +64,6 @@ describe('access-token', function () {
 	});
 
 	it('should refresh token', function (done) {
-
 		var at = AccessToken(options);
 		var token = at.token(tokens.access);
 		nock(options.site)
