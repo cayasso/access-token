@@ -1,8 +1,8 @@
-REPORTER = spec
-
 test:
 	@./node_modules/.bin/mocha \
-		--reporter $(REPORTER) \
-		--bail
+		--reporter spec \
+		--require should \
+		--recursive \
+		test
 
 .PHONY: test

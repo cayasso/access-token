@@ -151,6 +151,10 @@ token.get(function (err, token) {
 });
 ```
 
+### Todo
+
+Add tests.
+
 ### Run tests
 
 ``` bash
