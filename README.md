@@ -21,7 +21,8 @@ var options = {
   clientSecret: 'my-client-secret',
   tokenPath: '/oauth/token',
   userInfoPath: '/oauth/userinfo',
-  accessTokenName: 'token'
+  accessTokenName: 'token',
+  timeBeforeExp: 800
 };
 
 var accessToken = new AccessToken(options);
@@ -66,9 +67,9 @@ The `token` format referenced bellow as some methods first argument is an object
 
 ```javascript
 var token = {
-  access_token: 'access token'
-  refresh_token: 'refres token'
-  expired_in:  86400 // 24 hours
+  access_token: 'access token',
+  refresh_token: 'refres token',
+  expired_in:  86400, // 24 hours
   expired_at: 1389602392 // specific unix time token will expire
 }
 ```
@@ -90,7 +91,7 @@ var accessToken = AccessToken(config);
 Configuration options are:
 
 * `site`: OAuth provider site.
-* `clientID`: OAuth client id.
+* `clientId`: OAuth client id.
 * `clientSecret`: OAuth client secret string.
 * `tokenPath`: OAuth token path (default is `/oauth/token`).
 * `userInfoPath`: User information path (default is `/oauth/userinfo`).
@@ -150,10 +151,6 @@ token.get(function (err, token) {
   console.log('This is a valid accesst token', token);
 });
 ```
-
-### Todo
-
-Add tests.
 
 ### Run tests
 
