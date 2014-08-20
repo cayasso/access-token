@@ -17,7 +17,7 @@ $ npm install access-token
 
 var options = {
   site: 'my.oauth.com' ,
-  clientID: 'my-client-id',
+  clientId: 'my-client-id',
   clientSecret: 'my-client-secret',
   tokenPath: '/oauth/token',
   userInfoPath: '/oauth/userinfo',
@@ -142,7 +142,7 @@ token.refresh(function (err, newToken) {
 
 ### token#get(fn);
 
-If the token has expired, it will fetch a new .. one, otherwise it will return the current access token. 
+If the token has expired, it will fetch a new one, otherwise it will return the current access token. 
 
 ```javascript
 token.get(function (err, token) {
