@@ -1,3 +1,4 @@
+var sm = require("setimmediate");
 var moment = require('moment');
 var AccessToken = require('../');
 var tokens = require('./fixtures/tokens.json');
