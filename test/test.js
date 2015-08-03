@@ -1,3 +1,4 @@
+var should = require('should');
 var sm = require("setimmediate");
 var moment = require('moment');
 var AccessToken = require('../');

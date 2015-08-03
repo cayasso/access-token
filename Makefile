@@ -1,9 +1,7 @@
+MOCHA_OPTS = --bail --check-leaks
+
 test:
-	@./node_modules/.bin/mocha \
-		--reporter spec \
-		--require should \
-		--recursive \
-		test
+	@node_modules/.bin/mocha $(MOCHA_OPTS)
 
 coverage:
 	@node_modules/.bin/istanbul cover \
