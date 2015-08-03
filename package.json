@@ -6,6 +6,8 @@
   "homepage": "https://github.com/cayasso/access-token",
   "main": "index.js",
   "scripts": {
+    "coverage": "make coverage",
+    "test-travis": "make test-travis",
     "test": "make test"
   },
   "repository": {

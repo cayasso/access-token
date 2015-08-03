@@ -1,6 +1,11 @@
-language: node_js
+sudo: false
+language:
+  - node_js
 node_js:
-  - "0.8"
   - "0.10"
-before_install:
-  - npm install -g npm
+  - "0.12"
+  - "iojs"
+script:
+  - "make test-travis"
+after_script:
+  - "npm install coveralls@2.11.x && cat coverage/lcov.info | coveralls"

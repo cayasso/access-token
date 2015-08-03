@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/cayasso/access-token.png?branch=master)](https://travis-ci.org/cayasso/access-token)
 [![NPM version](https://badge.fury.io/js/access-token.png)](http://badge.fury.io/js/access-token)
+[![Coverage Status](https://img.shields.io/coveralls/cayasso/access-token/master.svg)](https://coveralls.io/r/cayasso/access-token)
 
 Small OAuth2 Access token helper.
 
