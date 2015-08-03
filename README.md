@@ -63,12 +63,12 @@ token.valid(function(err, valid){
 
 ### API
 
-The `myToken` format referenced bellow as some methods first argument is an object like this:
+The `myToken` format referenced abd bellow bellow as some methods first argument is an object like this:
 
 ```javascript
 var myToken = {
-  access_token: 'access token',
-  refresh_token: 'refres token',
+  access_token: 'MYACCESSTOKENABC123', // your access token
+  refresh_token: 'MYREFRESHTOKENABC123', // your secret refresh token
   expired_in:  86400, // 24 hours
   expired_at: 1389602392 // specific unix time token will expire
 }
