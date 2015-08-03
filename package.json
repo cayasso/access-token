@@ -22,16 +22,16 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "debug": "^1.0.4",
-    "moment": "^2.8.1",
-    "predefine": "^0.1.1",
-    "request": "^2.40.0"
+    "debug": "^2.2.0",
+    "moment": "^2.10.6",
+    "predefine": "^0.1.2",
+    "request": "^2.60.0"
   },
   "devDependencies": {
     "mocha": "*",
-    "nock": "^0.45.0",
-    "pre-commit": "0.0.9",
+    "nock": "^2.9.1",
+    "pre-commit": "1.1.1",
     "setimmediate": "^1.0.2",
-    "should": "~3.1.2"
+    "should": "~7.0.2"
   }
 }
