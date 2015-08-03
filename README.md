@@ -27,7 +27,7 @@ var options = {
 
 var accessToken = new AccessToken(options);
 
-var token = accessToken.token(token);
+var token = accessToken.token(myToken);
 
 if (token.expired) {
 
@@ -63,7 +63,7 @@ token.valid(function(err, valid){
 
 ### API
 
-The `token` format referenced bellow as some methods first argument is an object like this:
+The `myToken` format referenced bellow as some methods first argument is an object like this:
 
 ```javascript
 var token = {
@@ -97,13 +97,13 @@ Configuration options are:
 * `userInfoPath`: User information path (default is `/oauth/userinfo`).
 * `accessTokenName`: The access token field name (default is `access_token`).
 
-### AccessToken#token(token)
+### AccessToken#token(myToken)
 
 Wrap a token with magic.
 
 ```javascript
 var accessToken = AccessToken(config);
-var token = accessToken.token(token);
+var token = accessToken.token(myToken);
 ```
 
 ### token#expired
@@ -162,7 +162,7 @@ $ make test
 
 (The MIT License)
 
-Copyright (c) 2014 Jonathan Brumley &lt;cayasso@gmail.com&gt;
+Copyright (c) 2015 Jonathan Brumley &lt;cayasso@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
