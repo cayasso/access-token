@@ -44,11 +44,11 @@ if (token.expired) {
 
 // get a new token if expired or return the same one
 
-token.get(function (err, token) {
+token.get(function (err, validToken) {
   
   if (err) throw new Error(err);
 
-  console.log('This should be a valid token', token);
+  console.log('This should be a valid token', validToken);
 });
 
 // you can also validate the access token against oauth server
@@ -66,7 +66,7 @@ token.valid(function(err, valid){
 The `myToken` format referenced bellow as some methods first argument is an object like this:
 
 ```javascript
-var token = {
+var myToken = {
   access_token: 'access token',
   refresh_token: 'refres token',
   expired_in:  86400, // 24 hours
@@ -146,9 +146,9 @@ token.refresh(function (err, newToken) {
 If the token has expired, it will fetch a new one, otherwise it will return the current access token. 
 
 ```javascript
-token.get(function (err, token) {
+token.get(function (err, validToken) {
   if (err) throw Error(err);
-  console.log('This is a valid accesst token', token);
+  console.log('This is a valid accesst token', validToken);
 });
 ```
 
