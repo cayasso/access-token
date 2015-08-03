@@ -1,4 +1,4 @@
-node_modules
+node_modules/
+benchmark/
+coverage/
 npm-debug.log
-coverage.html
-lib-cov/
