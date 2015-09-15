@@ -6,7 +6,7 @@
 
 Small OAuth2 Access token helper.
 
-### Instalation
+### Installation
 
 ```bash
 $ npm install access-token
